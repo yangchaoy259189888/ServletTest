@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--注册-->
+    <servlet>
+        <servlet-name>ServletRegister</servlet-name>
+        <servlet-class>com.ycy.test.ServletRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRegister</servlet-name>
+        <url-pattern>/ServletRegister</url-pattern>
+    </servlet-mapping>
+
+    <!--登录-->
+    <servlet>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>com.ycy.test.ServletLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/ServletLogin</url-pattern>
+    </servlet-mapping>
+    
+    <!--下载-->
+    <servlet>
+        <servlet-name>ServletDownload</servlet-name>
+        <servlet-class>com.ycy.test.ServletDownload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDownload</servlet-name>
+        <url-pattern>/ServletDownload</url-pattern>
+    </servlet-mapping>
+</web-app>
