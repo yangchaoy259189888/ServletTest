@@ -37,7 +37,7 @@ public class ServletDownload extends HttpServlet {
             fileName = URLEncoder.encode(fileName, "UTF-8");
         }
 
-//        下载提示框
+//        显示下载提示框
         response.setHeader("Content-disposition", "attachment; fileName=" + fileName);
 
 //        两个输入输出流，并下载
