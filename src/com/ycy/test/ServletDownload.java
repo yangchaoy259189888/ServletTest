@@ -24,12 +24,14 @@ public class ServletDownload extends HttpServlet {
 //        根据传过来的数据组成下载的地址路径
         String fileName = request.getParameter("fileName");
         String realPath = getServletContext().getRealPath("download/" + fileName);
+        System.out.println(realPath);
 
 //        下载提示框
-        response.setHeader("Content-disposition", "attachment; fileName" + fileName);
+        response.setHeader("Content-disposition", "attachment; fileName=" + fileName);
 
 //        两个输入输出流，并下载
         FileInputStream fileInputStream = new FileInputStream(realPath);
+        System.out.println(fileInputStream);
         ServletOutputStream outputStream = response.getOutputStream();
         byte[] buffer = new byte[1024];
         int len = 0;
